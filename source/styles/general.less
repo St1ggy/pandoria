@@ -1,0 +1,49 @@
+@import '../../node_modules/bootstrap/dist/css/bootstrap.css';
+
+.hex {
+	display: inline-block;
+	width: 70px;
+	height: 40px;
+	text-align: center;
+	border: 1px solid black;
+	border-top: 0;
+	border-bottom: 0;
+	position: relative;
+	margin-bottom: 15px;
+	&:after,
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 70px;
+		height: 40px;
+		border: 1px solid black;
+		border-top: 0;
+		border-bottom: 0;
+	}
+	&:after {
+		transform: rotate(-60deg);
+	}
+	&:before {
+		transform: rotate(60deg);
+	}
+	&.odd {
+		left: -35px;
+	}
+	&.type1 {
+		background: brown;
+		&:after,
+		&:before {
+			background: brown;
+		}
+	}
+	&.type2 {
+		background: blue;
+		&:after,
+		&:before {
+			background: blue;
+		}
+	}
+}
