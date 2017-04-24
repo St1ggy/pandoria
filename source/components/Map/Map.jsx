@@ -10,6 +10,7 @@ import tiles from './hexes.json';
 // 	.initializeApp(config)
 // 	.database()
 // 	.ref()
+
 const Map = (props) => {
 	return (
 		<div className='container'>

@@ -1,6 +1,9 @@
 @import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 
 .hex {
+	&.clickable {
+		cursor: pointer;
+	}
 	display: inline-block;
 	box-sizing: border-box;
 	width: 75px;
@@ -11,7 +14,7 @@
 	border-top: 0;
 	border-bottom: 0;
 	position: relative;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 	&:after,
 	&:before {
 		content: '';
@@ -47,6 +50,22 @@
 		&:after,
 		&:before {
 			background: blue;
+		}
+	}
+	&:hover {
+		&.type-ground {
+			background: tint(brown, 20%);
+			&:after,
+			&:before {
+				background: tint(brown, 20%);
+			}
+		}
+		&.type-water {
+			background: tint(blue, 20%);
+			&:after,
+			&:before {
+				background: tint(blue, 20%);
+			}
 		}
 	}
 }

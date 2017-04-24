@@ -1,11 +1,14 @@
 import React from 'react';
+import InfoBox from './InfoBox/InfoBox';
 import classnames from 'classnames';
 import types from '../types.json'
 
 const Hex = ({hex}) => {
 	// console.log(hex);
 	return (
-		<span className={classnames('hex', 'tile', hex.offset, 'type-'+types[hex.type])}></span>
+		<span className={classnames('hex', 'tile', hex.offset, 'type-'+types[hex.type])}>
+			<InfoBox info={hex} />
+		</span>
 	);
 };
 
