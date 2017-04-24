@@ -2,10 +2,12 @@
 
 .hex {
 	display: inline-block;
-	width: 70px;
-	height: 40px;
+	box-sizing: border-box;
+	width: 75px;
+	height: 43px;
 	text-align: center;
-	border: 1px solid black;
+	border: 2px solid black;
+	margin-left: -2px;
 	border-top: 0;
 	border-bottom: 0;
 	position: relative;
@@ -13,13 +15,14 @@
 	&:after,
 	&:before {
 		content: '';
+		box-sizing: border-box;
 		display: block;
 		position: absolute;
 		top: 0;
-		left: 0;
-		width: 70px;
-		height: 40px;
-		border: 1px solid black;
+		left: -2px;
+		width: 75px;
+		height: 43px;
+		border: 2px solid black;
 		border-top: 0;
 		border-bottom: 0;
 	}
@@ -29,17 +32,17 @@
 	&:before {
 		transform: rotate(60deg);
 	}
-	&.odd {
-		left: -35px;
+	&.even {
+		left: -37px;
 	}
-	&.type1 {
+	&.type-ground {
 		background: brown;
 		&:after,
 		&:before {
 			background: brown;
 		}
 	}
-	&.type2 {
+	&.type-water {
 		background: blue;
 		&:after,
 		&:before {

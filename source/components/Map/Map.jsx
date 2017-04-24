@@ -1,6 +1,6 @@
 import React from 'react';
 import HexRows from './HexRows/HexRows';
-import tiles from '../../../../hexes.json';
+import tiles from './hexes.json';
 // import * as firebase from 'firebase';
 //
 // const config = {

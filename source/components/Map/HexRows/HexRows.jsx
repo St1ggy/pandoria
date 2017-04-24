@@ -10,12 +10,12 @@ const HexRows = ({hexes}) => {
 		if (!hexRows[hex.y]) {
 			hexRows[hex.y] = [];
 		}
-		hex.offset = hex.y%2 ? 'odd' : 'even';
+		hex.offset = hex.y%2 ? 'even' : 'odd';
 		hexRows[hex.y][hex.x] = hex;
 	}
-	console.log(hexRows);
+	// console.log(hexRows);
 	hexRows = hexRows.map((hexArray, index) => {
-		console.log(hexArray);
+		// console.log(hexArray);
 		let hexRow = hexArray.map((hex, index) => {
 			return <Hex key={index} hex={hex} />;
 		});
