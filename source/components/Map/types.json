@@ -1,4 +1,9 @@
 {
-	"1": "ground",
-	"2": "water"
+	"1": "desert",
+	"2": "mountain",
+	"3": "forest",
+	"4": "swamp",
+	"5": "water",
+	"6": "hill",
+	"7": "road",
 }
