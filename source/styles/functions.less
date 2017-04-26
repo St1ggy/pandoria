@@ -5,3 +5,32 @@
         clear:both;
     }
 }
+
+//colors
+@color-desert:		#efe035;
+@color-mountain:	#7c4735;
+@color-forest:		#008f5a;
+@color-swamp:			#ad83bc;
+@color-water:			#ad83bc;
+@color-hill:			#f8843e;
+@color-road:			#899094;
+@color-other:			#a8def5;
+.type-color(@type) {
+	@colorType: ~"@{color-@{type}}";
+	&.type-@{type} {
+		background: @colorType;
+		&:after,
+		&:before {
+			background: @colorType;
+		}
+	}
+	&:hover {
+		&.type-@{type} {
+			background: tint(color("@{colorType}"), 20%);
+			&:after,
+			&:before {
+				background: tint(color("@{colorType}"), 20%);
+			}
+		}
+	}
+}

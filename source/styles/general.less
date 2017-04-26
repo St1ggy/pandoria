@@ -1,4 +1,5 @@
 @import '../../node_modules/bootstrap/dist/css/bootstrap.css';
+@import './functions';
 
 .hex {
 	&.clickable {
@@ -15,19 +16,23 @@
 	border-bottom: 0;
 	position: relative;
 	margin-bottom: 20px;
+	z-index: 500;
 	&:after,
 	&:before {
 		content: '';
 		box-sizing: border-box;
 		display: block;
 		position: absolute;
-		top: 0;
+		transform-origin: center center 0px;
+		bottom: 0;
 		left: -2px;
 		width: 75px;
 		height: 43px;
 		border: 2px solid black;
 		border-top: 0;
 		border-bottom: 0;
+		z-index: -5;
+		cursor: pointer;
 	}
 	&:after {
 		transform: rotate(-60deg);
@@ -38,34 +43,26 @@
 	&.even {
 		left: -37px;
 	}
-	&.type-ground {
-		background: brown;
-		&:after,
-		&:before {
-			background: brown;
+	.info-box {
+		opacity: 0;
+		transition: opacity .1s ease;
+		cursor: pointer;
+	}
+	&:hover{
+		.info-box {
+			opacity: 1;
+		}
+		&:before,
+		&:after {
+			cursor: pointer;
 		}
 	}
-	&.type-water {
-		background: blue;
-		&:after,
-		&:before {
-			background: blue;
-		}
-	}
-	&:hover {
-		&.type-ground {
-			background: tint(brown, 20%);
-			&:after,
-			&:before {
-				background: tint(brown, 20%);
-			}
-		}
-		&.type-water {
-			background: tint(blue, 20%);
-			&:after,
-			&:before {
-				background: tint(blue, 20%);
-			}
-		}
-	}
+	.type-color(desert);
+	.type-color(mountain);
+	.type-color(forest);
+	.type-color(swamp);
+	.type-color(water);
+	.type-color(hill);
+	.type-color(road);
+	.type-color(other);
 }
