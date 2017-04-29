@@ -17,6 +17,15 @@
 	position: relative;
 	margin-bottom: 20px;
 	z-index: 500;
+	&.type-empty {
+		border-color: transparent !important;
+		cursor: default !important;
+		&:after,
+		&:before {
+			border-color: transparent !important;
+			cursor: default !important;
+		}
+	}
 	&:after,
 	&:before {
 		content: '';

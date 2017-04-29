@@ -1,4 +1,5 @@
 {
+	"0": "empty",
 	"1": "desert",
 	"2": "mountain",
 	"3": "forest",
@@ -6,5 +7,5 @@
 	"5": "water",
 	"6": "hill",
 	"7": "road",
-	"0": "other"
+	"8": "other"
 }
